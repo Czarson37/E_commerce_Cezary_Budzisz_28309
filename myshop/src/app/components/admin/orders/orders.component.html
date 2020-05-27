@@ -4,20 +4,6 @@
     <div class="content-header">
       <h2>DASHBOARD</h2>
     </div>
-    <div style="width: 60%;">
-      <div style="display: block">
-      <canvas baseChart
-      [datasets]="barChartData"
-      [labels]="barChartLabels"
-      [options]="barChartOptions"
-      [plugins]="barChartPlugins"
-      [legend]="barChartLegend"
-      [chartType]="barChartType">
-      </canvas>
-      </div>
-      <button mat-button mat-raised-button color="primary"
-      (click)="randomize()">Update</button>
-      </div>
     <div class="content-container">
       <h2>Zamówienia</h2>
       <table>
@@ -32,7 +18,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let order of this.mainService.orders?.orders">
+          <tr>
             <td>{{order.id}}</td>
             <td>{{order.first_name}}</td>
             <td>{{order.last_name}}</td>
